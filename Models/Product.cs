@@ -13,11 +13,11 @@ namespace EF_Task.Models
     {
         public int ProductId { get; set; }
 
-        [MaxLength(50)]
-        [Unicode(true)]
+        //[MaxLength(50)]
+        //[Unicode(true)]
         public string Name { get; set; }
 
-        [Column(TypeName = "real")]
+        //[Column(TypeName = "real")]
         public double Quantity { get; set; }
 
         public double Price { get; set; }

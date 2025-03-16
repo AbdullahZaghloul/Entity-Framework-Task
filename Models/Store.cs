@@ -12,8 +12,8 @@ namespace EF_Task.Models
     {
         public int StoreId { get; set; }
 
-        [MaxLength(80)]
-        [Unicode(true)]
+        //[MaxLength(80)]
+        //[Unicode(true)]
         public string Name { get; set; }
 
         public List<Sale> Sales { get; set; }

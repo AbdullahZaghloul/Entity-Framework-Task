@@ -21,5 +21,33 @@ namespace EF_Task.Data
             optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=EFProject512;" +
                 "Integrated Security=True;TrustServerCertificate=True");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Customer>()
+                .Property(e => e.Name)
+                .HasMaxLength(100)
+                .IsUnicode(true);
+
+            modelBuilder.Entity<Customer>()
+                .Property(e => e.Email)
+                .HasMaxLength(80)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Name)
+                .HasMaxLength(50)
+                .IsUnicode(true);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Quantity)
+                .HasColumnType("real");
+
+            modelBuilder.Entity<Store>()
+                .Property(e => e.Name)
+                .HasMaxLength(80)
+                .IsUnicode(true);
+        }
     }
 }

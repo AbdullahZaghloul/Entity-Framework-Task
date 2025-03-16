@@ -13,12 +13,12 @@ namespace EF_Task.Models
     {
         public int CustomerId { get; set; }
 
-        [MaxLength(100)]
-        [Unicode(true)]
+        //[MaxLength(100)]
+        //[Unicode(true)]
         public string Name { get; set; }
 
-        [MaxLength(80)]
-        [Unicode(false)]
+        //[MaxLength(80)]
+        //[Unicode(false)]
         public string Email { get; set; }
 
         public string CreaditCardNumber { get; set; }
